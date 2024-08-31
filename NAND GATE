@@ -1,0 +1,23 @@
+WRITE A CODE IN VHDL FOR NAND GATE
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity nand_gate is
+  port (
+    a, b : in std_logic;
+    y : out std_logic
+  );
+end entity nand_gate;
+
+architecture behavioral of nand_gate is
+begin
+  process(a, b)
+  begin
+    if (a = '1' and b = '1') then
+      y <= '0';
+    else
+      y <= '1';
+    end if;
+  end process;
+end architecture behavioral;
